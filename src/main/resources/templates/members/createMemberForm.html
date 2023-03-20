@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>memberInsertPage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <header>
+        <h1>Hello Spring IndexPage</h1>
+    </header>
+    <hr>
+    <nav>
+        <ol>
+            <h3>회원기능</h3>
+            <li><a href="/members/new">회원가입</a></li>
+            <li><a href="/members">회원목록</a></li>
+        </ol>
+    </nav>
+    <div class="container">
+        <form action="/members/new" method="post">
+        <div class="form-group">
+        <br><br><h3>회원가입</h3>
+        <p>회원가입 정보입력란</p>
+        <hr>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" placeholder="이름을 입력하세요!">
+            </div><br><br>
+            <button type="submit">등록</button>
+            <button type="reset">취소</button>
+
+        </form>
+</div>
+</body>
+</html>

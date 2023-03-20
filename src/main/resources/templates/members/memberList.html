@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>memberInsertPage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>A
+<header>
+    <h1>Hello Spring IndexPage</h1>
+</header>A
+<hr>
+<nav>
+    <ol>
+        <h3>회원기능</h3>
+        <li><a href="/members/new">회원가입</a></li>
+        <li><a href="/members">회원목록</a></li>
+    </ol>
+</nav>
+<div class="container">
+
+    <div class="container">
+        <br><br><h3>회원 목록</h3>
+        <p>회원목록정보</p>
+        <hr>
+        <table>
+            <thead>
+            <tr>
+                <th>------  등록된 회원  -------</th>
+            </tr>
+            </thead>
+            <tbody><!--model안의 값을 루프를 돌면서 꺼내어 보여준다. -->
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div><br><br>
+
+</div>
+</body>
+</html>
